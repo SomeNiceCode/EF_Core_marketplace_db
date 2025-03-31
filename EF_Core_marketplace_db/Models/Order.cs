@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,13 @@ namespace EF_Core_marketplace_db.Models
     public class Order
     {
         public int Id { get; set; } // первичный ключ
+
+        [Required(ErrorMessage = "Сумма заказа обязательна.")]
+        [Range(0.01, 10000000000000.00, ErrorMessage = "Сумма заказа должна быть от 0.01 до 10 000 000 000 000.")]
         public decimal Sum { get; set; }
+
+        [Required(ErrorMessage = "Адрес доставки обязателен.")]
+        [MaxLength(200, ErrorMessage = "Адрес доставки не должен превышать 200 символов.")] 
         public string DeliveryAddress { get; set; }
 
         public int UserId { get; set; } // внешний ключ на айдишник юзера, который связан с заказом

@@ -35,7 +35,7 @@ namespace EF_Core_marketplace_db.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("EF_Core_marketplace_db.Models.Order", b =>
@@ -60,7 +60,7 @@ namespace EF_Core_marketplace_db.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("EF_Core_marketplace_db.Models.Product", b =>
@@ -94,7 +94,7 @@ namespace EF_Core_marketplace_db.Migrations
 
                     b.HasIndex("SellerId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("EF_Core_marketplace_db.Models.ProductOrder", b =>
@@ -109,7 +109,7 @@ namespace EF_Core_marketplace_db.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("ProductOrders");
+                    b.ToTable("ProductOrders", (string)null);
                 });
 
             modelBuilder.Entity("EF_Core_marketplace_db.Models.Reviews", b =>
@@ -136,7 +136,7 @@ namespace EF_Core_marketplace_db.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Reviews");
+                    b.ToTable("Reviews", (string)null);
                 });
 
             modelBuilder.Entity("EF_Core_marketplace_db.Models.Seller", b =>
@@ -157,7 +157,7 @@ namespace EF_Core_marketplace_db.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sellers");
+                    b.ToTable("Sellers", (string)null);
                 });
 
             modelBuilder.Entity("EF_Core_marketplace_db.Models.SellerOrder", b =>
@@ -172,7 +172,7 @@ namespace EF_Core_marketplace_db.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("SellerOrders");
+                    b.ToTable("SellerOrders", (string)null);
                 });
 
             modelBuilder.Entity("EF_Core_marketplace_db.Models.User", b =>
@@ -197,7 +197,7 @@ namespace EF_Core_marketplace_db.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("EF_Core_marketplace_db.Models.Order", b =>

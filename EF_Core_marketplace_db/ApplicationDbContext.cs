@@ -23,6 +23,7 @@ namespace EF_Core_marketplace_db
         {
             base.OnModelCreating(modelBuilder);
 
+
             modelBuilder.Entity<ProductOrder>()
                 .HasKey(po => new { po.ProductId, po.OrderId }); // тут говорим что у нас есть 2 первичных ключа для 
 
